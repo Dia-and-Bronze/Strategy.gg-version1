@@ -4,7 +4,6 @@ import axios from 'axios';
 import './MainSummonerInput.css'
 
 
-
 const MainSummonerInput = () => {
   const [users, setUsers] =useState(null);
   const [loading , setloading] =useState(false);
@@ -20,11 +19,10 @@ const MainSummonerInput = () => {
         'http://61.99.75.232:5000/specpage/?name='+name
       );
       console.log(response);
-     
       return response;
     } catch(error){
-      console.log(error);
       setError(error);
+      return error;
     }
     setloading(false);
   };
@@ -39,20 +37,20 @@ const MainSummonerInput = () => {
     console.log(searched_name);
     event.preventDefault();
     const summoner = apiCall(searched_name)
-          .then(response => {
-          if (response){
-              console.log("get summoner");
-          }
-          })
-          .catch(error => {
-            console.log("get error");
-            <Link to="/ExceptPage"></Link>
-          })
-          console.log('call api');
+    .then(response => {
+      if (response){
+          console.log(Object.entries(summoner.data.message))
+        }
+      })
+    .catch(error => {
+      /*없는 소환사 혹은 시간초과*/
+      console.log("get error");
+      /*<Link to="/ExceptPage"/>*/
+    });
+    console.log('call api');
 
-          if (loading) return <div className='loading'></div>
-         /* if (error) return <Link to="/ExceptPage"></Link>*/
-
+    if (loading) return <div className='loading'></div>
+    if (error) return <Link to="/ExceptPage"></Link>
   }
   return(
     <form onSubmit={onSubmit}>

@@ -2,12 +2,16 @@ import React from 'react';
 import './Summoner.css'
 import ProfileIocn from '../img/TempProfileicon.png'
 import Tier from '../img/TempTier.png'
+import  "./../firebase"
+import { storage } from './../firebase';
 
-function Summoner(props){
-    
+const Summoner = (props) => {
+    console.log(storage.ref());
+    const profileimg = storage.ref().child('0.png').getDownloadURL();
+    console.log(profileimg);
     return(
         <div className="ProfileContainer">
-            <img src = {ProfileIocn} alt="Profileicon" className = "ProfileIcon"/> 
+            <img src =  {profileimg} alt="Profileicon" className = "ProfileIcon"/> 
             <b className = "SummonerName">Hide On Bush</b>
             <button className = "UpdateButton">전적갱신</button>
                 

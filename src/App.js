@@ -12,7 +12,7 @@ function App() {
     <Route path="/MainPage" exact={true} component={MainPage}/>
     <Route path="/ModelPage" exact={true} component={ModelPage}/>
     <Route path="/ExceptPage" exact={true} component={ExceptPage}/>
-</HashRouter>
+    </HashRouter>
   );
 }
 
