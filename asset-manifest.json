@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Strategy.gg-version1/static/css/main.25efc4f9.chunk.css",
+    "main.js": "/Strategy.gg-version1/static/js/main.04e0732d.chunk.js",
+    "main.js.map": "/Strategy.gg-version1/static/js/main.04e0732d.chunk.js.map",
+    "runtime-main.js": "/Strategy.gg-version1/static/js/runtime-main.7635f14d.js",
+    "runtime-main.js.map": "/Strategy.gg-version1/static/js/runtime-main.7635f14d.js.map",
+    "static/css/2.96a31fb0.chunk.css": "/Strategy.gg-version1/static/css/2.96a31fb0.chunk.css",
+    "static/js/2.fbcfb32e.chunk.js": "/Strategy.gg-version1/static/js/2.fbcfb32e.chunk.js",
+    "static/js/2.fbcfb32e.chunk.js.map": "/Strategy.gg-version1/static/js/2.fbcfb32e.chunk.js.map",
+    "index.html": "/Strategy.gg-version1/index.html",
+    "static/css/2.96a31fb0.chunk.css.map": "/Strategy.gg-version1/static/css/2.96a31fb0.chunk.css.map",
+    "static/css/main.25efc4f9.chunk.css.map": "/Strategy.gg-version1/static/css/main.25efc4f9.chunk.css.map",
+    "static/js/2.fbcfb32e.chunk.js.LICENSE.txt": "/Strategy.gg-version1/static/js/2.fbcfb32e.chunk.js.LICENSE.txt",
+    "static/media/MainLogo.95b3b7d5.png": "/Strategy.gg-version1/static/media/MainLogo.95b3b7d5.png",
+    "static/media/MainPage.css": "/Strategy.gg-version1/static/media/MainPagebackground.f23d2d05.png",
+    "static/media/ModelPage.css": "/Strategy.gg-version1/static/media/ModelPageBackground.678a308a.png",
+    "static/media/ExecptPage.css": "/Strategy.gg-version1/static/media/NANUMSQUAREB.ebe0aa17.TTF",
+    "static/media/GameDetailWrapper.css": "/Strategy.gg-version1/static/media/NANUMSQUAREEB.e5471443.TTF",
+    "static/media/PlayStyle.css": "/Strategy.gg-version1/static/media/NANUMSQUAREL.ace03365.TTF",
+    "static/media/SummonerDetailPage.css": "/Strategy.gg-version1/static/media/SummonerDetailPageBackground.dbb68912.png",
+    "static/media/react-widgets.css": "/Strategy.gg-version1/static/media/rw-widgets.e8b49908.svg",
+    "static/media/MainSummonerInput.css": "/Strategy.gg-version1/static/media/loading.00f400cc.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7635f14d.js",
+    "static/css/2.96a31fb0.chunk.css",
+    "static/js/2.fbcfb32e.chunk.js",
+    "static/css/main.25efc4f9.chunk.css",
+    "static/js/main.04e0732d.chunk.js"
+  ]
+}
