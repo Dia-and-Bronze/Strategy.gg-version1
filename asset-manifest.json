@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Strategy.gg-version1/static/css/main.25efc4f9.chunk.css",
-    "main.js": "/Strategy.gg-version1/static/js/main.191b7bfd.chunk.js",
-    "main.js.map": "/Strategy.gg-version1/static/js/main.191b7bfd.chunk.js.map",
+    "main.js": "/Strategy.gg-version1/static/js/main.80495235.chunk.js",
+    "main.js.map": "/Strategy.gg-version1/static/js/main.80495235.chunk.js.map",
     "runtime-main.js": "/Strategy.gg-version1/static/js/runtime-main.7635f14d.js",
     "runtime-main.js.map": "/Strategy.gg-version1/static/js/runtime-main.7635f14d.js.map",
     "static/css/2.96a31fb0.chunk.css": "/Strategy.gg-version1/static/css/2.96a31fb0.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.96a31fb0.chunk.css",
     "static/js/2.0492894f.chunk.js",
     "static/css/main.25efc4f9.chunk.css",
-    "static/js/main.191b7bfd.chunk.js"
+    "static/js/main.80495235.chunk.js"
   ]
 }
