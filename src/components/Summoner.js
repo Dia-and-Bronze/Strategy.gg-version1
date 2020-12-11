@@ -41,7 +41,7 @@ const Summoner = ({ info }) => {
 
     const refetchInfo = async () => {
         setIsRefetching(1);
-        const { data: fetchInfo } = await axios.get(`http://61.99.75.232:5000/refresh/?name=${copyInfo.userspec.summoner_name}`);
+        const { data: fetchInfo } = await axios.get(`https://61.99.75.232:5000/refresh/?name=${copyInfo.userspec.summoner_name}`);
 
         if (fetchInfo.userspec.summoner_name === copyInfo.userspec.summoner_name) {
             setIsRefetching(0);
@@ -90,7 +90,7 @@ const Summoner = ({ info }) => {
 
 
 
-    if (copyInfo.userspec.tier === 'MASTER' || copyInfo.userspec.tier === 'CHALLENGER')
+    if (copyInfo.userspec.tier === 'MASTER' || copyInfo.userspec.tier === 'GRANDMASTER'||copyInfo.userspec.tier === 'CHALLENGER')
         copyInfo.userspec.rank = "";
 
     if (isRefetching === 1) {
@@ -129,7 +129,7 @@ const Summoner = ({ info }) => {
                         <img src = {Tierimg} alt="TierIcon" className = "TierIcon"/>
 
             
-            
+                        {console.log(copyInfo.userspec)}
                         <div className = "tierNlp">
                             <b className = "TierName">{copyInfo.userspec.tier} {copyInfo.userspec.rank}</b>
                             <b className = "LP">{copyInfo.userspec.league_point}LP</b>

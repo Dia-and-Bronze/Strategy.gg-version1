@@ -186,15 +186,18 @@ const Game = (props) => {
     }, [isLoading, isPageLoading])
     
 
+
     const getUrlnfo = async () => {
         let ChampionURL, Spell1URL, Spell2URL, LaneURL = 0;
         let Lane = copyInfo.info.lane;
-        if (copyInfo.info.lane === "BOTTOM" && copyInfo.info.role === "DUO_CARRY") {
-            Lane = "AD";
-        }
-        else if (copyInfo.info.lane === "BOTTOM" && copyInfo.info.role === "DUO_SUPPORT") {
-            Lane = "SUPPORTER";
-        }
+        console.log(copyInfo.info);
+        // if (copyInfo.info.lane === "BOTTOM" && copyInfo.info.role === "DUO_CARRY") {
+        //     Lane = "AD";
+        // }
+        // else if (copyInfo.info.lane === "BOTTOM" && copyInfo.info.role === "DUO_SUPPORT") {
+        //     Lane = "SUPPORTER";
+        // }
+       
 
         const championURL = () => {
             ChampionURL = storage.ref().child('Champion/' + String(ChIDToName(copyInfo.info.champion_id)) + '.png').getDownloadURL();
@@ -273,9 +276,9 @@ const Game = (props) => {
 
         try {
             const spec = await axios
-                .get(`http://61.99.75.232:5000/analysis/?name=${copyInfo.summonerName}&game_id=${copyInfo.info.game_id}`);
+                .get(`https://61.99.75.232:5000/analysis/?name=${copyInfo.summonerName}&game_id=${copyInfo.info.game_id}`);
             const PS_spec = await axios
-            .get(`http://61.99.75.232:5000/playstyle/?name=${copyInfo.summonerName}&game_id=${copyInfo.info.game_id}`);
+            .get(`https://61.99.75.232:5000/playstyle/?name=${copyInfo.summonerName}&game_id=${copyInfo.info.game_id}`);
       
             setPlayStyleInfo(PS_spec.data); 
      

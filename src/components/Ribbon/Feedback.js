@@ -7,9 +7,13 @@ import BoxContainers from './BoxContainers'
 var temp_StrategyArr = [];
 var myStrategy = [];
 const Feedback = (props) =>{
+    console.log(props);
     let yourStrategyMinimumTier=0;
     if(props.summonerTier === "BRONZE"||props.summonerTier === "SILVER"){
         yourStrategyMinimumTier= "GOLD";
+    }
+    else if(props.summonerTier === "GRANDMASTER"){
+        yourStrategyMinimumTier="CHALLENGER";
     }
     else{
         yourStrategyMinimumTier=props.summonerTier;
@@ -24,12 +28,12 @@ const Feedback = (props) =>{
     if(props.summonerTier === "PLATINUM")tierList=["PLATINUM","DIAMOND","MASTER","CHALLENGER"];
     if(props.summonerTier === "DIAMOND")tierList=["DIAMOND","MASTER","CHALLENGER"];
     if(props.summonerTier === "MASTER")tierList=["MASTER","CHALLENGER"];
+    if(props.summonerTier === "GRANDMASTER")tierList=["CHALLENGER"];
     if(props.summonerTier === "CHALLENGER")tierList=["CHALLENGER"];
     temp_StrategyArr = [];
     function getStrategy(value) {
         if(props.summonerTier==="BRONZE"){
-        
-            
+
             if(value === "GOLD"){temp_StrategyArr.push(feedbackArr.map(number => {return props.feedback[number].strategies[0].strategy}))} 
             if(value === "PLATINUM"){temp_StrategyArr.push(feedbackArr.map(number => {return props.feedback[number].strategies[1].strategy}))}
             if(value === "DIAMOND"){temp_StrategyArr.push(feedbackArr.map(number => {return props.feedback[number].strategies[2].strategy}))}
@@ -65,11 +69,17 @@ const Feedback = (props) =>{
             if(value === "MASTER"){temp_StrategyArr.push(feedbackArr.map(number => { return props.feedback[number].strategies[0].strategy}))}
             if(value === "CHALLENGER"){temp_StrategyArr.push(feedbackArr.map(number => { return props.feedback[number].strategies[1].strategy}))}
           }
+          if(props.summonerTier==="GRANDMASTER"){
+            
+            if(value === "CHALLENGER"){temp_StrategyArr.push(feedbackArr.map(number => { return props.feedback[number].strategies[0].strategy}))}
+          }
+
           if(props.summonerTier==="CHALLENGER"){
-            if(value === "CHALLENGER"){temp_StrategyArr.push(feedbackArr.map(number => { return feedbackArr.feedback[number].strategies[0].strategy}))}
+            if(value === "CHALLENGER"){temp_StrategyArr.push(feedbackArr.map(number => { return props.feedback[number].strategies[0].strategy}))}
           }
   
        myStrategy = temp_StrategyArr[0];
+       console.log(myStrategy);
        temp_StrategyArr=[];
     }
     getStrategy(tier);
